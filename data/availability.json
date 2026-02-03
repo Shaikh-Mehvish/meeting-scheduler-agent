@@ -23,4 +23,12 @@
     ],
     "preference": "afternoon"
   }
+  {
+     "person": "Krish",
+     "availability": [
+       { "day": "Monday", "start": 10, "end": 12 },
+       { "day": "Wednesday", "start": 10, "end": 12 }
+     ],
+     "preference": "morning"
+ }
 ]
