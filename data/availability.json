@@ -18,17 +18,17 @@
   {
     "person": "Charlie",
     "availability": [
-      { "day": "Monday", "start": 9, "end": 11 },
+      { "day": "Monday", "start": 10, "end": 12 },
       { "day": "Wednesday", "start": 15, "end": 17 }
     ],
     "preference": "afternoon"
-  }
+  },
   {
-     "person": "Krish",
-     "availability": [
-       { "day": "Monday", "start": 10, "end": 12 },
-       { "day": "Wednesday", "start": 10, "end": 12 }
-     ],
-     "preference": "morning"
- }
+    "person": "Krish",
+    "availability": [
+      { "day": "Monday", "start": 10, "end": 12 },
+      { "day": "Wednesday", "start": 10, "end": 12 }
+    ],
+    "preference": "morning"
+  }
 ]
