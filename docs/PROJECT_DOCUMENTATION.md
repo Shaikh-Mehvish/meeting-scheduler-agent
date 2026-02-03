@@ -48,6 +48,8 @@ Each participant includes:
 }
 ```
 
+---
+
 ## 5. Calendar Data Compression
 
 Calendar compression is performed by grouping all availability slots by day.
@@ -55,11 +57,11 @@ This eliminates redundant information and simplifies overlap detection.
 
 Benefits:
 
-Reduced complexity
+- Reduced complexity
+- Faster decision making
+- Cleaner scheduling logic
 
-Faster decision making
-
-Cleaner scheduling logic
+---
 
 ## 6. Scheduling Logic
 
