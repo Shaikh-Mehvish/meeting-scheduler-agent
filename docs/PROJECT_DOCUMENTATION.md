@@ -53,57 +53,24 @@ Calendar compression is performed by grouping all availability slots by day.
 This eliminates redundant information and simplifies overlap detection.
 
 Benefits:
-- Reduced complexity
-- Faster decision making
-- Cleaner scheduling logic
+
+Reduced complexity
+
+Faster decision making
+
+Cleaner scheduling logic
 
 6. Scheduling Logic
 
 For each day, the agent computes a common meeting slot by:
-- Taking the maximum of all start times
-- Taking the minimum of all end times
+
+Taking the maximum of all start times
+
+Taking the minimum of all end times
 
 A meeting slot is considered valid only if:
 start_time < end_time
 
-7. Preference-Based Optimization
 
-Each valid meeting slot is categorized into:
-- Morning (9–12)
-- Afternoon (12–16)
-- Evening (16–19)
-
-Slots are scored based on how many participant preferences match the time category.
-Higher scores indicate better suitability.
-
-8. Output
-
-The system outputs ranked meeting slot recommendations in the command line.
-
-🤖 AI Meeting Scheduler Recommendations:
-
-- Monday | 11 - 12 | Score: 3
-
-9. Error Handling
-
-If no overlapping time slot exists, the agent correctly reports:
-No common meeting slots found.
-
-10. Limitations
-
-- All participants must have overlapping availability
-- Preferences are limited to time of day
-- No real calendar integration
-
-11. Future Enhancements
-
-- Day-based preferences
-- Priority-based participants
-- Web interface (Streamlit / FastAPI)
-- Integration with real calendar APIs
-
-12. Conclusion
-
-The AI Meeting Scheduler Agent demonstrates how agent-based reasoning and constraint optimization can be applied to real-world scheduling problems using simple and explainable logic.
 
 
