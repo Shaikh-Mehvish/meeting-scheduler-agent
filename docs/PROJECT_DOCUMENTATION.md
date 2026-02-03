@@ -46,8 +46,9 @@ Each participant includes:
   ],
   "preference": "morning"
 }
+```
 
-5. Calendar Data Compression
+## 5. Calendar Data Compression
 
 Calendar compression is performed by grouping all availability slots by day.
 This eliminates redundant information and simplifies overlap detection.
@@ -60,7 +61,7 @@ Faster decision making
 
 Cleaner scheduling logic
 
-6. Scheduling Logic
+## 6. Scheduling Logic
 
 For each day, the agent computes a common meeting slot by:
 
