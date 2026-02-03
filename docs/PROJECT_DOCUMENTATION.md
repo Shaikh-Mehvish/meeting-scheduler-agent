@@ -79,6 +79,7 @@ Each valid meeting slot is categorized into:
 - Morning (9–12)
 - Afternoon (12–16)
 - Evening (16–19)
+
 Slots are scored based on how many participant preferences match the time category.
 Higher scores indicate better suitability.
 
@@ -91,7 +92,7 @@ Sample Output
 
 🤖 AI Meeting Scheduler Recommendations:
 
-- Monday | 11 - 12 | Score: 3
+-Monday | 11 - 12 | Score: 3
 
 ---
 
