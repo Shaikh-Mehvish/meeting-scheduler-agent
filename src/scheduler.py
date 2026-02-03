@@ -95,15 +95,26 @@ def rank_slots(common_slots):
     return ranked
 
 
-if __name__ == "__main__":
+def run_scheduler():
+    """
+    Run the meeting scheduler agent and display recommendations.
+    """
     data = load_availability("data/availability.json")
     compressed_calendar = compress_calendar(data)
     common_slots = find_common_slots(compressed_calendar)
     ranked_slots = rank_slots(common_slots)
 
-    print("\nRanked Meeting Slot Recommendations:")
+    if not ranked_slots:
+        print("No common meeting slots found.")
+        return
+
+    print("\n🤖 AI Meeting Scheduler Recommendations:\n")
     for slot in ranked_slots:
         print(
-            f"{slot['day']}: {slot['start']} - {slot['end']} "
-            f"(Score: {slot['score']})"
+            f"- {slot['day']} | {slot['start']} - {slot['end']} "
+            f"| Score: {slot['score']}"
         )
+
+
+if __name__ == "__main__":
+    run_scheduler()
