@@ -33,13 +33,38 @@ def compress_calendar(data):
     return compressed
 
 
+def find_common_slots(compressed_calendar):
+    """
+    Find common overlapping time slots for all participants per day.
+    """
+    common_slots = {}
+
+    for day, slots in compressed_calendar.items():
+        if len(slots) < 2:
+            continue
+
+        start_time = max(slot["start"] for slot in slots)
+        end_time = min(slot["end"] for slot in slots)
+
+        if start_time < end_time:
+            common_slots[day] = {
+                "start": start_time,
+                "end": end_time,
+                "participants": [slot["person"] for slot in slots],
+                "preferences": [slot["preference"] for slot in slots]
+            }
+
+    return common_slots
+
+
 if __name__ == "__main__":
     data = load_availability("data/availability.json")
     compressed_calendar = compress_calendar(data)
+    common_slots = find_common_slots(compressed_calendar)
 
-    print("Compressed Calendar Data:")
-    for day, slots in compressed_calendar.items():
-        print(f"\n{day}:")
-        for slot in slots:
-            print(slot)
-
+    print("\nSuggested Common Meeting Slots:")
+    for day, slot in common_slots.items():
+        print(
+            f"{day}: {slot['start']} - {slot['end']} "
+            f"with participants {slot['participants']}"
+        )
