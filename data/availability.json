@@ -1,0 +1,26 @@
+[
+  {
+    "person": "Alice",
+    "availability": [
+      { "day": "Monday", "start": 10, "end": 12 },
+      { "day": "Wednesday", "start": 14, "end": 16 }
+    ],
+    "preference": "morning"
+  },
+  {
+    "person": "Bob",
+    "availability": [
+      { "day": "Monday", "start": 11, "end": 13 },
+      { "day": "Wednesday", "start": 10, "end": 12 }
+    ],
+    "preference": "morning"
+  },
+  {
+    "person": "Charlie",
+    "availability": [
+      { "day": "Monday", "start": 9, "end": 11 },
+      { "day": "Wednesday", "start": 15, "end": 17 }
+    ],
+    "preference": "afternoon"
+  }
+]
